@@ -1,0 +1,29 @@
+body {
+	padding: 50px;
+	background: black;
+	color: #ff1400;
+}
+
+#info {
+	text-align: center;
+	color: white;
+}
+
+#notSupported {
+	display: none;
+	color: white;
+	margin-bottom: 20px;
+}
+
+#ascii {
+	font-family: monospace;
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: -1.5px;
+	text-align: center;
+}
+
+#button {
+	display: none;
+	margin: 20px auto;
+}
