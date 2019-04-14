@@ -1,16 +1,18 @@
 // Author: Andrei Gheorghe (http://github.com/idevelop)
 
 var ascii = (function() {
+	
+
 	function asciiFromCanvas(canvas, options) {
 		// Original code by Jacob Seidelin (http://www.nihilogic.dk/labs/jsascii/)
 		// Heavily modified by Andrei Gheorghe (http://github.com/idevelop)
 
 		var characters = (" .,:;i1tfLCG08@").split("");
-
 		var context = canvas.getContext("2d");
 		var canvasWidth = canvas.width;
 		var canvasHeight = canvas.height;
-		
+		var d = new Date();
+		var timer = d.getSeconds();
 		var asciiCharacters = "";
 
 		// calculate contrast factor
@@ -39,7 +41,13 @@ var ascii = (function() {
 				// http://stackoverflow.com/questions/596216/formula-to-determine-brightness-of-rgb-color
 				var brightness = (0.299 * contrastedColor.red + 0.587 * contrastedColor.green + 0.114 * contrastedColor.blue) / 255;
 
-				var character = characters[(characters.length - 1) - Math.round(brightness * (characters.length - 1))];
+				var index = (characters.length - 1) - Math.round(brightness * (characters.length - 1));
+				index+=timer;
+
+				index = index%characters.length;
+
+				
+				var character = characters[index];
 
 				asciiCharacters += character;
 			}
