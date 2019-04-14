@@ -5,6 +5,7 @@
 	<meta charset="utf-8" />
  	<link rel="stylesheet" href="css/main.css"/>
 	<meta name="mobile-web-app-capable" content="yes">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
 </head>
 <body>
 	<div id="info">Please allow this page to access your camera.</div>
@@ -15,5 +16,45 @@
 	<script src="script/camera.js"></script>
 	<script src="script/ascii.js"></script>
 	<script src="script/app.js"></script>
+	<!-- <script type="text/javascript">
+		//
+		// Description: Randomly change background color every 5 seconds
+		//
+		// NewcWare 1997
+		// Author: Scott Newcomer 3/1997
+		// Email: nuke@bright.net
+		//
+		function setbackground()
+		{
+		window.setTimeout( "setbackground()", 250); // 5000 milliseconds delay
+		
+		var index = Math.round(Math.random() * 4);
+		
+		var ColorValue = "ff0000"; // default color - white (index = 0)
+		
+		if(index == 1)
+		ColorValue = "ff1f00";
+		if(index == 2)
+		ColorValue = "ff3f00";
+		if(index == 3)
+		ColorValue = "ff5f00";
+		if(index == 4)
+		ColorValue = "ff7f00";
+		// if(index == 5)
+		// ColorValue = "ff7f00";
+		// if(index == 6)
+		// ColorValue = "ff9f00";
+		// if(index == 7)
+		// ColorValue = "ffaf00";
+		// if(index == 8)
+		// ColorValue = "ffbf00";
+		// if(index == 9)
+		// ColorValue = "ffcf00";
+		
+		document.getElementsByTagName("body")[0].style.color = "#" + ColorValue;
+		
+		}
+		</script> -->
+		<body onload="setbackground();">
 </body>
 </html>

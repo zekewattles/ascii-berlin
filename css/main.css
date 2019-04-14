@@ -1,7 +1,9 @@
 body {
 	padding: 50px;
 	background: black;
-	color: #ff1400;
+	color: white; 
+	/* #ff1400 */
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 #info {
@@ -16,9 +18,9 @@ body {
 }
 
 #ascii {
-	font-family: monospace;
-	font-size: 12px;
-	line-height: 12px;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.8rem;
+	line-height: 0.8rem;
 	letter-spacing: -1.5px;
 	text-align: center;
 }
